@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8445D2312696F4010074F07E /* DiscoverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445D2302696F4010074F07E /* DiscoverApp.swift */; };
-		8445D2332696F4010074F07E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445D2322696F4010074F07E /* ContentView.swift */; };
+		8445D2332696F4010074F07E /* LoggedOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445D2322696F4010074F07E /* LoggedOutView.swift */; };
 		8445D2352696F4020074F07E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8445D2342696F4020074F07E /* Assets.xcassets */; };
 		8445D2382696F4020074F07E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8445D2372696F4020074F07E /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		8445D22D2696F4010074F07E /* Discover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8445D2302696F4010074F07E /* DiscoverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverApp.swift; sourceTree = "<group>"; };
-		8445D2322696F4010074F07E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8445D2322696F4010074F07E /* LoggedOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutView.swift; sourceTree = "<group>"; };
 		8445D2342696F4020074F07E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8445D2372696F4020074F07E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8445D2392696F4020074F07E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,9 +53,9 @@
 			isa = PBXGroup;
 			children = (
 				8445D2302696F4010074F07E /* DiscoverApp.swift */,
-				8445D2322696F4010074F07E /* ContentView.swift */,
-				8445D2342696F4020074F07E /* Assets.xcassets */,
-				8445D2392696F4020074F07E /* Info.plist */,
+				84CFCC622697073B00D4F914 /* Models */,
+				84CFCC612697073300D4F914 /* Views */,
+				84CFCC632697074500D4F914 /* Supporting Files */,
 				8445D2362696F4020074F07E /* Preview Content */,
 			);
 			path = Discover;
@@ -67,6 +67,30 @@
 				8445D2372696F4020074F07E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		84CFCC612697073300D4F914 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8445D2322696F4010074F07E /* LoggedOutView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84CFCC622697073B00D4F914 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84CFCC632697074500D4F914 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8445D2342696F4020074F07E /* Assets.xcassets */,
+				8445D2392696F4020074F07E /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8445D2332696F4010074F07E /* ContentView.swift in Sources */,
+				8445D2332696F4010074F07E /* LoggedOutView.swift in Sources */,
 				8445D2312696F4010074F07E /* DiscoverApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +295,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Discover/Preview Content\"";
 				DEVELOPMENT_TEAM = XXH56N6WGN;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Discover/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Discover/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,7 +317,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Discover/Preview Content\"";
 				DEVELOPMENT_TEAM = XXH56N6WGN;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Discover/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Discover/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
