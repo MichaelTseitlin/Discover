@@ -11,6 +11,7 @@
 		8445D2332696F4010074F07E /* LoggedOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445D2322696F4010074F07E /* LoggedOutView.swift */; };
 		8445D2352696F4020074F07E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8445D2342696F4020074F07E /* Assets.xcassets */; };
 		8445D2382696F4020074F07E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8445D2372696F4020074F07E /* Preview Assets.xcassets */; };
+		84BB63CC26970D0100C95000 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB63CB26970D0100C95000 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		8445D2342696F4020074F07E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8445D2372696F4020074F07E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8445D2392696F4020074F07E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84BB63CB26970D0100C95000 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				8445D2322696F4010074F07E /* LoggedOutView.swift */,
+				84BB63CB26970D0100C95000 /* LoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84BB63CC26970D0100C95000 /* LoginView.swift in Sources */,
 				8445D2332696F4010074F07E /* LoggedOutView.swift in Sources */,
 				8445D2312696F4010074F07E /* DiscoverApp.swift in Sources */,
 			);
