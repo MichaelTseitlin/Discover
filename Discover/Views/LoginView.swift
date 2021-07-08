@@ -40,9 +40,10 @@ struct LoginView: View {
                 .border(Color.black, width: 2)
                 .textContentType(.password)
             
-            Button(buttonTitle) {
-                
+            NavigationLink(destination: destinationView) {
+                Text(buttonTitle)
             }
+            
             .padding()
             .frame(maxWidth: .infinity)
             .background(Color.black)
@@ -54,6 +55,15 @@ struct LoginView: View {
         }
         .padding()
         .navigationTitle(navigationTitle)
+    }
+    
+    @ViewBuilder
+    var destinationView: some View {
+        if loginState == .login {
+            HomeView()
+        } else {
+            RegisterView()
+        }
     }
 }
 
