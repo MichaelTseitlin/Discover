@@ -29,7 +29,7 @@ struct LoggedOutView: View {
                     Image("logo")
                 }
                 HStack(alignment: .center, spacing: 9) {
-                    NavigationLink(destination: LoginView()) {
+                    NavigationLink(destination: LoginView(loginState: .login)) {
                         Text("LOG IN")
                     }
                     .padding()
@@ -39,9 +39,10 @@ struct LoggedOutView: View {
                     .overlay(RoundedRectangle(cornerRadius: 6).stroke(Color.black, lineWidth: 2))
                     .font(.caption.bold())
                     
-                    Button("REGISTER") {
-                        
+                    NavigationLink(destination: LoginView(loginState: .register)) {
+                        Text("REGISTER")
                     }
+                    
                     .padding()
                     .frame(maxWidth: .infinity)
                     .background(Color.black)

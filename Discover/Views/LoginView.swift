@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct LoginView: View {
+    
+    enum LoginState {
+        case login, register
+    }
+    
+    var loginState: LoginState
+    
     @State private var email = ""
     @State private var password = ""
+    
+    private var buttonTitle: String {
+        loginState == .login ? "Log in" : "Next"
+    }
+    
+    private var navigationTitle: String {
+        loginState == .login ? "Log in" : "Register"
+    }
     
     var body: some View {
         VStack(alignment: .center, spacing: 16) {
@@ -25,7 +40,7 @@ struct LoginView: View {
                 .border(Color.black, width: 2)
                 .textContentType(.password)
             
-            Button("Log in") {
+            Button(buttonTitle) {
                 
             }
             .padding()
@@ -38,21 +53,21 @@ struct LoginView: View {
             Spacer()
         }
         .padding()
-        .navigationTitle("Log in")
+        .navigationTitle(navigationTitle)
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            LoginView()
+            LoginView(loginState: .login)
                 .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
                 .previewDisplayName("iPhone 12 Pro Max")
             
         }
         
         NavigationView {
-            LoginView()
+            LoginView(loginState: .register)
                 .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
                 .previewDisplayName("iPhone 8")
         }
