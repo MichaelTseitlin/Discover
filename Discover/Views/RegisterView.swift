@@ -9,6 +9,8 @@ import SwiftUI
 
 struct RegisterView: View {
     
+    let auth: Auth
+    
     @State private var login = String()
     
     var body: some View {
@@ -16,10 +18,11 @@ struct RegisterView: View {
             TextField("Login", text: $login)
                 .padding()
                 .border(Color.black, width: 2)
-            NavigationLink(destination: HomeView()) {
-                
-                Text("SIGN UP")
+            
+            Button("SIGN UP") {
+                auth.token = "TOKEN"
             }
+            
             .padding()
             .frame(maxWidth: .infinity)
             .background(Color.black)
@@ -41,14 +44,15 @@ struct RegisterView: View {
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            RegisterView()
+            RegisterView(auth: Auth())
                 .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
                 .previewDisplayName("iPhone 12 Pro Max")
             
         }
         
         NavigationView {
-            RegisterView()                        .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
+            RegisterView(auth: Auth())
+                .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
                 .previewDisplayName("iPhone 8")
         }    }
 }

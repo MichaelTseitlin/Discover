@@ -11,6 +11,9 @@
 		8445D2332696F4010074F07E /* LoggedOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445D2322696F4010074F07E /* LoggedOutView.swift */; };
 		8445D2352696F4020074F07E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8445D2342696F4020074F07E /* Assets.xcassets */; };
 		8445D2382696F4020074F07E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8445D2372696F4020074F07E /* Preview Assets.xcassets */; };
+		845F37A726987B8700449C58 /* MainFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F37A626987B8700449C58 /* MainFlowView.swift */; };
+		845F37A92698809800449C58 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F37A82698809800449C58 /* WelcomeView.swift */; };
+		845F37AB269880A700449C58 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F37AA269880A700449C58 /* Auth.swift */; };
 		84BB63CC26970D0100C95000 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB63CB26970D0100C95000 /* LoginView.swift */; };
 		84BB63CE269728C900C95000 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB63CD269728C900C95000 /* RegisterView.swift */; };
 		84BB63D026972AD700C95000 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB63CF26972AD700C95000 /* HomeView.swift */; };
@@ -23,6 +26,9 @@
 		8445D2342696F4020074F07E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8445D2372696F4020074F07E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8445D2392696F4020074F07E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		845F37A626987B8700449C58 /* MainFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowView.swift; sourceTree = "<group>"; };
+		845F37A82698809800449C58 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		845F37AA269880A700449C58 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		84BB63CB26970D0100C95000 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		84BB63CD269728C900C95000 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		84BB63CF26972AD700C95000 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -78,9 +84,11 @@
 		84CFCC612697073300D4F914 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				845F37A82698809800449C58 /* WelcomeView.swift */,
 				8445D2322696F4010074F07E /* LoggedOutView.swift */,
 				84BB63CB26970D0100C95000 /* LoginView.swift */,
 				84BB63CD269728C900C95000 /* RegisterView.swift */,
+				845F37A626987B8700449C58 /* MainFlowView.swift */,
 				84BB63CF26972AD700C95000 /* HomeView.swift */,
 			);
 			path = Views;
@@ -89,6 +97,7 @@
 		84CFCC622697073B00D4F914 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				845F37AA269880A700449C58 /* Auth.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,8 +183,11 @@
 				84BB63CC26970D0100C95000 /* LoginView.swift in Sources */,
 				84BB63CE269728C900C95000 /* RegisterView.swift in Sources */,
 				8445D2332696F4010074F07E /* LoggedOutView.swift in Sources */,
+				845F37A726987B8700449C58 /* MainFlowView.swift in Sources */,
 				84BB63D026972AD700C95000 /* HomeView.swift in Sources */,
 				8445D2312696F4010074F07E /* DiscoverApp.swift in Sources */,
+				845F37A92698809800449C58 /* WelcomeView.swift in Sources */,
+				845F37AB269880A700449C58 /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

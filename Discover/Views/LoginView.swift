@@ -18,6 +18,8 @@ struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
     
+    let auth: Auth
+    
     private var buttonTitle: String {
         loginState == .login ? "Log in" : "Next"
     }
@@ -60,9 +62,9 @@ struct LoginView: View {
     @ViewBuilder
     var destinationView: some View {
         if loginState == .login {
-            HomeView()
+            MainFlowView()
         } else {
-            RegisterView()
+            RegisterView(auth: auth)
         }
     }
 }
@@ -70,14 +72,14 @@ struct LoginView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            LoginView(loginState: .login)
+            LoginView(loginState: .login, auth: Auth())
                 .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
                 .previewDisplayName("iPhone 12 Pro Max")
             
         }
         
         NavigationView {
-            LoginView(loginState: .register)
+            LoginView(loginState: .register, auth: Auth())
                 .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
                 .previewDisplayName("iPhone 8")
         }

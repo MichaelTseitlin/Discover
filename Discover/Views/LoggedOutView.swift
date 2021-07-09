@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LoggedOutView: View {
+    
+    let auth: Auth
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
@@ -29,7 +32,7 @@ struct LoggedOutView: View {
                     Image("logo")
                 }
                 HStack(alignment: .center, spacing: 9) {
-                    NavigationLink(destination: LoginView(loginState: .login)) {
+                    NavigationLink(destination: LoginView(loginState: .login, auth: auth)) {
                         Text("LOG IN")
                     }
                     .padding()
@@ -39,7 +42,7 @@ struct LoggedOutView: View {
                     .overlay(RoundedRectangle(cornerRadius: 6).stroke(Color.black, lineWidth: 2))
                     .font(.caption.bold())
                     
-                    NavigationLink(destination: LoginView(loginState: .register)) {
+                    NavigationLink(destination: LoginView(loginState: .register, auth: auth)) {
                         Text("REGISTER")
                     }
                     
@@ -59,11 +62,11 @@ struct LoggedOutView: View {
 
 struct LoggedOutView_Previews: PreviewProvider {
     static var previews: some View {
-        LoggedOutView()
+        LoggedOutView(auth: Auth())
             .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
             .previewDisplayName("iPhone 12 Pro Max")
         
-        LoggedOutView()
+        LoggedOutView(auth: Auth())
             .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
             .previewDisplayName("iPhone 8")
     }
